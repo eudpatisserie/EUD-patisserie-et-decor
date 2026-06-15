@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUD Pâtisserie & Décor | Sit Ofisyèl</title>
+    <!-- Favicon rapid ak bèl emoji gato a -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container" onclick="location.href='index.html'">
+            <div class="logo-icon-circle">🎂</div>
+            <div class="logo-text">
+                <span class="brand-name">EUD</span>
+                <div class="brand-divider"></div>
+                <span class="brand-sub">PÂTISSERIE & DÉCOR</span>
+            </div>
+        </div>
+
+        <div class="main-dropdown" id="myDropdown">
+            <button class="menu-trigger-btn" id="menuBtn">Meni ☰</button>
+            <div class="main-dropdown-menu">
+                <a href="#katalog" onclick="closeMenu()">🛒 Sèvis nou yo</a>
+                <a href="#galerie" onclick="closeMenu()">📸 Galerie Foto</a>
+                <a href="#temwayaj" onclick="closeMenu()">⭐ Sa Kliyan Di</a>
+                <a href="#a-propo" onclick="closeMenu()">✨ A Pwopo</a>
+                <a href="peman.html" class="menu-moncash-link" onclick="closeMenu()">💳 Pèman via MonCash</a>
+                <div class="menu-divider"></div>
+                <a href="#" class="menu-order-btn" onclick="openOrderModal('jeneral'); closeMenu(); return false;">🎉 Fè yon Kòmand</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sèvis Gastwonomi ak Dekorasyon Elit</h1>
+            <p>Gato pwofesyonèl, dekorasyon majik ak sèvis traiteur pou rann fèt ou yo inoublidab.</p>
+            <a href="#katalog" class="btn-primary">Gade Sèvis Nou yo</a>
+        </div>
+        <div class="custom-shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ================= SEKSYON KATALOG ================= -->
+    <section id="katalog" class="catalog-section">
+        <div class="section-title">
+            <h2>Kisa Nou Ofri Ou</h2>
+            <p>Chwazi nan pi bèl kreyasyon nou yo. Nou travay sou kòmand sèlman.</p>
+        </div>
+
+        <div class="catalog-grid">
+            <div class="catalog-card">
+                <div class="card-img-container">
+                    <img src="IMAGES/gato-maryaj.webp" alt="Gato ak Desè Pwofesyonèl" loading="lazy">
+                    <span class="badge">3 a 5 Jou Davans</span>
+                </div>
+                <div class="card-info">
+                    <h3>Gato ak Desè Pwofesyonèl</h3>
+                    <p>Gato maryaj, anniversaire, cupcakes pèsonalize, ak tab dous konplè pou envite w yo.</p>
+                    <div class="price-tag">konplete komand lan pou pri an</div>
+                    <button class="btn-order" onclick="openOrderModal('patisserie')">Kòmand pou Patisri</button>
+                </div>
+            </div>
+
+            <div class="catalog-card">
+                <div class="card-img-container">
+                    <img src="IMAGES/dekorasyon.webp" alt="Dekorasyon ak Atizay Balon" loading="lazy">
+                    <span class="badge">3 a 5 Jou Davans</span>
+                </div>
+                <div class="card-info">
+                    <h3>Dekorasyon ak Atizay Balon</h3>
+                    <p>dekò balon modèn, zòn foto (backdrops), flè ak aranjman tab pou kreye yon anbyans majik.</p>
+                    <div class="price-tag">Pri: konplete komand lan pou pri an</div>
+                    <button class="btn-order" onclick="openOrderModal('decor')">Kòmand pou Dekorasyon</button>
+                </div>
+            </div>
+
+            <div class="catalog-card">
+                <div class="card-img-container">
+                    <img src="IMAGES/traiteur.webp" alt="Sèvis Traiteur / Finger Food" loading="lazy">
+                    <span class="badge-special">1 Mwa Davans</span>
+                </div>
+                <div class="card-info">
+                    <h3>Sèvis Traiteur / Finger Food</h3>
+                    <p>Pate cho, krokèt, ak gwo plat manje pou maryaj, ak tout kalite resepsyon.</p>
+                    <div class="price-tag">Pri:konplete komand lan pou pri an</div>
+                    <button class="btn-order" onclick="openOrderModal('traiteur')">Kòmand pou Traiteur</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEKSYON GALERIE ================= -->
+    <section id="galerie" class="gallery-section">
+        <div class="section-title">
+            <h2>Galerie Kreyasyon Nou Yo</h2>
+            <p>Gade foto yo pou wè detay travay atizan nou yo fè ak anpil lanmou.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="IMAGES/manje.webp" alt="Patisri EUD 1" loading="lazy"></div>
+            <div class="gallery-item"><img src="IMAGES/manje2.webp" alt="Patisri EUD 2" loading="lazy"></div>
+            <div class="gallery-item"><img src="IMAGES/manje3.webp" alt="Patisri EUD 3" loading="lazy"></div>
+            <div class="gallery-item"><img src="IMAGES/manje4.webp" alt="Patisri EUD 4" loading="lazy"></div>
+            <div class="gallery-item"><img src="IMAGES/manje5.webp" alt="Patisri EUD 5" loading="lazy"></div>
+            <div class="gallery-item"><img src="IMAGES/manje6.webp" alt="Patisri EUD 6" loading="lazy"></div>
+            <div class="gallery-item"><img src="IMAGES/manje7.webp" alt="Patisri EUD 7" loading="lazy"></div>
+            <div class="gallery-item"><img src="IMAGES/manje8.webp" alt="Patisri EUD 8" loading="lazy"></div>
+        </div>
+    </section>
+
+    <!-- ================= SEKSYON TEMWAYAJ ================= -->
+    <section id="temwayaj" class="testimonials-section">
+        <div class="section-title">
+            <h2>Sa Kliyan Nou Yo Di</h2>
+            <p>Konfyans ou se pi gwo rekonpans nou. Men fidbak kèk kliyan satisfè.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Gato maryaj la te tèlman gou e bèl, tout envite m yo te sezi. Sèvis pwofesyonèl nèt!"</p>
+                <h4 class="client-name">Daphnée R.</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Dekorasyon balon an te majik! Yo respekte tèm nan ak dat la san pwoblèm. M ap rekòmande yo 100%."</p>
+                <h4 class="client-name">Jean-Baptiste M.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEKSYON A PROPO ================= -->
+    <section id="a-propo" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="IMAGES/bernadelle.webp" alt="Mèt Patisri EUD" loading="lazy">
+            </div>
+            <div class="about-text">
+                <h2>A Pwopo de EUD Pâtisserie</h2>
+                <p>Byenveni nan mond dous nou an! Nou se yon ekip pasyone ki dedye pou bay pi bon kalite nan sèvis gastronomik ak dekorasyon elit. Chak kreyasyon nou fè se yon travay atistik ki konbine gou ekskiz ak distenksyon san parèy.</p>
+                <p><strong>Dèyè Kreyasyon yo:</strong> Chef patisri nou an mete tout kè l ak eksperyans li pou transfòme lide ou yo an reyalite, soti nan chwa pi bon engredyan yo rive nan dènye detay dekorasyon an pou evènman ou an ka pafè e inoublidab.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOUTON WHATSAPP FLOTAN (STICKY) -->
+    <a href="https://wa.me/50947339176" class="whatsapp-floating-btn" target="_blank" title="Pale ak yon ajan sou WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>EUD Pâtisserie & Décor</h3>
+                <p>Rann fèt ou yo inoublidab e majik.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasyon</h4>
+                <a href="#katalog">Sèvis nou yo</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#temwayaj">Temwayaj</a>
+                <a href="#a-propo">A Pwopo</a>
+            </div>
+            <div class="footer-socials">
+                <h4>Suiv Nou / Kontak</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1EXncPixx1/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/50947339176" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:ebernadelle@gmail.com" title="Email nou"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="footer-tel">📞 Kontak: +509 4733-9176</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EUD Pâtisserie & Décor. Tout dwa rezève.</p>
+        </div>
+    </footer>
+
+    <!-- ================= MODAL KÒMAND ================= -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeOrderModal()">&times;</span>
+            <h2 id="modalTitle">Fè Kòmand Ou</h2>
+            <p class="modal-notice">⚠️ Validasyon: Fòk ou vèse <strong>75% nan kòb la</strong> sou meni peman an pou kòmand lan ka anrejistre apre ou fin resevwa pri a via WhatsApp.</p>
+            
+            <form id="orderForm">
+                <input type="hidden" id="sevis_chwazi" name="sevis">
+                <div class="form-group">
+                    <label for="nom">Non Ak Siyati W:</label>
+                    <input type="text" id="nom" required placeholder="Ex: Marie Camel">
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Telefòn WhatsApp:</label>
+                    <input type="tel" id="telefon" required placeholder="Ex: +509 4733 9176">
+                </div>
+                <div class="form-group">
+                    <label for="detay">Chwazi sa w bezwen (Koulè, tèm, kantite moun):</label>
+                    <textarea id="detay" rows="3" required placeholder="Mete detay yo la a..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="date_fete">Chwazi Dat Evènman An:</label>
+                    <input type="date" id="date_fete" name="date_fete" required>
+                    <small id="dateHelp" class="date-help"></small>
+                </div>
+                <button type="submit" class="btn-submit">Voye Kòmand lan sou WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
